@@ -18,18 +18,15 @@ contract Avirbhav{
 
      constructor (address _admin) public{
 
-         admin = _admin;
-         initializeTeams();
+        admin = _admin;
+        
+        teams["jal"] = 0;
+        teams["vayu"] = 0;
+        teams["agni"] = 0;
+        teams["nandi"] = 0;
 
      }  
 
-     
-    function initializeTeams() private {
-       teams["jal"] = 0;
-       teams["vayu"] = 0;
-       teams["agni"] = 0;
-       teams["nandi"] = 0;
-    }  
 
     function updateScore(string memory _name, int _score)public onlyAdmin {
 
